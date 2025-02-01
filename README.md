@@ -150,7 +150,7 @@ To specify a custom locale for loading search engines:
 Default Keymaps
 ---------------
 * &lt;CR&gt;      Open link under the cursor.
-* &lt;S-CR&gt;    Open link under the cursor (with new tab).
+* &lt;A-CR&gt;    Open link under the cursor (with new tab).
 * &lt;TAB&gt;     Move cursor next link.
 * &lt;s-TAB&gt;   Move cursor previous link.
 * &lt;Space&gt;   Scroll down.
