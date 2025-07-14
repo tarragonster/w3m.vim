@@ -92,9 +92,9 @@ endfunction
 
 function! w3m#ShowSourceAndHeader()
   if exists('b:last_url')
-    let cmdline = join( [ g:w3m#command, s:tmp_option, g:w3m#option, '"' . b:last_url . '"' ," | gunzip -f"], ' ')
+    let cmdline = join( [ g:w3m#command, s:tmp_option, g:w3m#option, '"' . b:last_url . '"' ], ' ')
     new
-    execute '%!'.substitute(cmdline, "-halfdump", "-dump_both", "")
+    execute '%!'.substitute(cmdline, "-halfdump", "-dump_both", "") | gunzip -f
   endif
 endfunction
 
