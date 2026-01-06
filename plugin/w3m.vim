@@ -16,7 +16,7 @@ if !exists('g:w3m#command')
   let g:w3m#command = 'w3m'
 endif
 if !exists('g:w3m#option')
-  let g:w3m#option = '-o display_charset=' . &encoding . ' -halfdump -I UTF-8 -O UTF-8 -o frame=true -o ext_halfdump=1 -o strict_iso2022=0 -o ucs_conv=1'
+  let g:w3m#option = '-o display_charset=uft-8 -halfdump -I UTF-8 -O UTF-8 -o frame=true -o ext_halfdump=1 -o strict_iso2022=0 -o ucs_conv=1'
 endif
 if !exists('g:w3m#wget_command')
   let g:w3m#wget_command = 'wget'
