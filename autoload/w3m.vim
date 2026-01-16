@@ -106,6 +106,14 @@ function! w3m#ShowDump()
   endif
 endfunction
 
+function! w3m#ShowText()
+  if exists('b:last_url')
+    let cmdline = join( [ g:w3m#command, s:tmp_option, g:w3m#option, '"' . b:last_url . '"' ], ' ')
+    new
+    execute '%!'.substitute(cmdline, "-halfdump", "-dump", "")
+  endif
+endfunction
+
 function! w3m#ShowExternalBrowser()
   if exists('g:w3m#external_browser') && exists('b:last_url')
     call s:system(g:w3m#external_browser . ' "' . b:last_url . '"')
